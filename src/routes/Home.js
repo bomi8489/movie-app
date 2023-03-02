@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import Movie from '../components/Movie';
+import {
+    Container, 
+    Loader,
+    Movies,
+} from "../Presenter/HomePresenter"
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -19,23 +24,24 @@ function Home() {
   }, [])
 
   return (
-    <div>
+    <Container>
       {
-      loading ? <h1>Loading...</h1> : 
-      <div>
+      loading ? <Loader>Loading...</Loader> : 
+      <Movies>
         {movies.map(item =>
           <Movie 
             key={item.id}
             id={item.id}
-            medium_cover_image={item.large_cover_image}
+            medium_cover_image={item.medium_cover_image}
             title={item.title}
-            summagy={item.summary}
+            year={item.year}
+            summary={item.summary}
             genres={item.genres}
           />
         )}
-      </div>
+      </Movies>
       }
-    </div>
+    </Container>
   )
 }
 

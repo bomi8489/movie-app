@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom"
+import {
+    Loader,
+} from "../Presenter/DetailPresenter"
 
 function Detail() {
     const [loading, setLoading] = useState(true);
@@ -16,7 +19,7 @@ function Detail() {
     }, [])
     return (
         <div>
-            {loading ? <h1>Loading...</h1> :
+            {loading ? <Loader>Loading...</Loader> :
             <h1>Detail</h1>
             }
         </div>
