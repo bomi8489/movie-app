@@ -19,7 +19,7 @@ function Movie({ id, medium_cover_image, title, year, summary, genres}) {
           <Link to={`/movie/${id}`}>{title}</Link>
         </MovieTitle>
         <MovieYear>{year}</MovieYear>
-        <p>{summary.length > 235 ? `${summary.slice(0, 255)} ...` : summary}</p>
+        <p>{summary.length > 100 ? `${summary.slice(0, 100)} ...` : summary}</p>
         <MovieGenres>
           {genres.map(g => (
             <li key={g}>{g}</li>

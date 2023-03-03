@@ -17,6 +17,7 @@ box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
 `
 
 const MovieImg = styled.img`
+background-color: white;
 position: relative;
 top: -50px;
 max-width: 150px;
