@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://bomi8489.github.io/movie-app"
+  "homepage": "https://bomi8489.github.io/movie-app",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
