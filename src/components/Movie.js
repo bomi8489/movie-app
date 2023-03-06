@@ -21,7 +21,7 @@ function Movie({ id, medium_cover_image, title, year, summary, genres}) {
         <MovieYear>{year}</MovieYear>
         <p>{summary.length > 100 ? `${summary.slice(0, 100)} ...` : summary}</p>
         <MovieGenres>
-          {genres.map(g => (
+          {genres && genres.map(g => (
             <li key={g}>{g}</li>
           ))}
         </MovieGenres>
