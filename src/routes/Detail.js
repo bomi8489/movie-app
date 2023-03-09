@@ -35,7 +35,7 @@ function Detail() {
                     <DetailYear>Year: {detail.year}</DetailYear>
                     <DetailParagraph><h3>Summary</h3>{detail.description_full}</DetailParagraph>
                     <DetailGenres> <h3>Genres</h3>
-                        {detail.genres.map(g => (
+                        {detail.genres && detail.genres.map(g => (
                             <li key={g}>{g}</li>
                         ))}
                     </DetailGenres>
